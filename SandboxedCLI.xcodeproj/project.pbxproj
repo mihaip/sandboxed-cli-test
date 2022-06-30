@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		91E907F1286E2BC900FEC970 /* SandboxedCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SandboxedCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E907F4286E2BC900FEC970 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		91E907FB286E2D8E00FEC970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91E907FC286E2DBA00FEC970 /* SandboxedCLI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SandboxedCLI.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,9 @@
 		91E907F3286E2BC900FEC970 /* SandboxedCLI */ = {
 			isa = PBXGroup;
 			children = (
+				91E907FC286E2DBA00FEC970 /* SandboxedCLI.entitlements */,
 				91E907F4286E2BC900FEC970 /* main.c */,
+				91E907FB286E2D8E00FEC970 /* Info.plist */,
 			);
 			path = SandboxedCLI;
 			sourceTree = "<group>";
@@ -238,7 +242,10 @@
 		91E907F9286E2BC900FEC970 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SandboxedCLI/SandboxedCLI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SandboxedCLI/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,7 +253,10 @@
 		91E907FA286E2BC900FEC970 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SandboxedCLI/SandboxedCLI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/SandboxedCLI/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
